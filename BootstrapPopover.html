@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap Popover</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			$('#btnTestJs').popover({
+				title     : 'Bootstrap Test Two', //弹出框标题
+				trigger   : 'click',//触发事件类型
+				toggle    : 'popover',//为弹出框
+				html      : true,//是否解析内容内html
+				placement : 'right',//弹出框位置
+				content   : 'hello world',//弹出框内容
+			});
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+</head>
+<body>
+	<input class  = "btn btn-success"               // 标签样式
+			type  = "button"                        // 标签类型
+			title = "BootstrapTest"                 // 弹出框标题
+			data-trigger   = "hover"                // 触发事件类型
+			data-toggle    = "popover"              // 为弹出框
+			data-html      = "true"                 // 弹出内容是否解析html
+			data-placement = 'bottom'               // 弹出框位置
+			data-content   = "<h1>hello</h1> hello" // 弹出框内容
+			value="popover test html"/>
+	<input id="btnTestJs" class="btn btn-primary" type="button" value="popover test javascript"/>
+</body>
+</html>
